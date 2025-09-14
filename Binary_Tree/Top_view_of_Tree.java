@@ -40,7 +40,7 @@ public class Top_view_of_Tree {
                     q.add(null);
                 }
             }else{
-                if(!map.containsKey(curr.hd)){
+                if(!map.containsKey(curr.hd)){  // if the key(hd) occurs time it enters 
                     map.put(curr.hd,curr.node);
                 }
                 if(curr.node.left!=null){
@@ -49,7 +49,7 @@ public class Top_view_of_Tree {
                 }
                 if(curr.node.right!=null){
                     q.add(new Info2(curr.node.right,curr.hd+1));
-                    max=Math.max(min,curr.hd+1);
+                    max=Math.max(max,curr.hd+1);
                 }
             }
         }
