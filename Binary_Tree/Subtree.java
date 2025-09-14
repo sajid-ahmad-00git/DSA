@@ -18,8 +18,8 @@ public class Subtree {
 
 
     public static boolean isSubtree(Node root, Node subroot){
-        if(subroot==null)return true;
-        if(root==null) return false;
+        if(subroot==null)return true;   //because an empty tree is always considered a subtree.
+        if(root==null) return false; //  if root is null but subroot isn't, it's not a subtree
 
         if(root.data==subroot.data){
             if(isidentical(root,subroot)){
@@ -27,7 +27,7 @@ public class Subtree {
             }
         }
 
-        return isSubtree(root.left, subroot.left) || isSubtree(root.right, subroot.right);
+        return isSubtree(root.left, subroot) || isSubtree(root.right, subroot);
     }
 
 
