@@ -22,7 +22,7 @@ public class Diameter_of_tree_2_approaches {
         Info rightInfo=diameter2(root.right);
 
         int diam=Math.max(Math.max(leftInfo.diam,rightInfo.diam),leftInfo.ht+leftInfo.ht+1);
-        int ht=Math.max(leftInfo.ht,rightInfo.ht)+1;
+        int ht=Math.max(leftInfo.ht,rightInfo.ht)+1;    // with one recursice call we calculate both height and diameter both;
     
         return new Info(diam, ht);
     }
