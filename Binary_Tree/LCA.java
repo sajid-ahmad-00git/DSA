@@ -37,11 +37,23 @@ public class LCA {
         Node lca=path1.get(i-1);
         return lca;
     }
+
+    public static Node lca2(Node root,int n1,int n2){
+        if(root==null|| root.data==n1||root.data==n2) return root;
+        Node leftLca=lca2(root.left, n1, n2);
+        Node rightLca=lca2(root.right, n1, n2);
+
+        if(leftLca==null) return rightLca;
+        if(rightLca==null) return leftLca;
+
+        return root;  // i am the ancestor , the n1 and n2 lies in my left subtree and right subtree
+    }
     public static void main(String[] args) {
          int[] nodes={1,2,4,-1,-1,5,-1,-1,3,6,-1,-1,7,-1,-1};
 
     Node root=BinaryTreeBt.buildTree(nodes);
     System.out.println(lowestCommonAncestor(root, 04, 07).data);
+    System.out.println(lca2(root, 5, 7).data);
     }
     
 }
