@@ -41,9 +41,9 @@ public class BinaryTree{
     // now when i do Node treeRoot=tree.buildTree(nodes) it says exception out of bound 
     // either you do one of them or want to do both then reset the index to -1
 
-    BinaryTreeBt tree=new BinaryTreeBt();
-    Node treeRoot=tree.buildTree(nodes);
-    System.out.println(treeRoot.data);
+    // BinaryTreeBt tree=new BinaryTreeBt();
+    // Node treeRoot=tree.buildTree(nodes);
+    // System.out.println(treeRoot.data);
 
 
         
