@@ -42,7 +42,6 @@ public class Transform_into_sum_tree {
         Node root = BinaryTreeBt.buildTree(nodes);
 
         System.out.println(transform(root)); // its return root as 28
-
         Traversal.preOrderTraversal(root); // when we traverse it returns 27 ,9 ,0 ,0 13,0 ,0
 
     }
