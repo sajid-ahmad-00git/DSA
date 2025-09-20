@@ -12,10 +12,10 @@ public class Print_in_Range {
             System.out.print(root.data + " ");
             print(root.right, k1, k2);
 
-        } else if (root.data > k1) {
-            print(root.right, k1, k2);
-        } else {
+        } else if (root.data < k1) {
             print(root.left, k1, k2);
+        } else {
+            print(root.right, k1, k2);
         }
     }
 
