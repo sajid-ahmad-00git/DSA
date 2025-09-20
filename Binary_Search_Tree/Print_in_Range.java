@@ -13,9 +13,12 @@ public class Print_in_Range {
             print(root.right, k1, k2);
 
         } else if (root.data < k1) {
-            print(root.left, k1, k2);
-        } else {
+            // current node and left subtree too small -> go right
             print(root.right, k1, k2);
+        } else {
+            // current node and right subtree too large -> go left
+
+            print(root.left, k1, k2);
         }
     }
 
