@@ -25,6 +25,10 @@ public class Reverse_level_order {
             Node currNode = q.poll();
             st.push(currNode);
 
+            // IMPORTANT: add right first, then left.
+            // This ensures that when we later pop from the stack,
+            // nodes at the same level come out left -> right.
+
             if (currNode.right != null)
                 q.add(currNode.right);
             if (currNode.left != null)
