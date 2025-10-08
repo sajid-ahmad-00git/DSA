@@ -70,5 +70,40 @@ public class Traversal {
         
     }
 
+    // this is the iterative postOrder
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> list=new ArrayList<>();
+        if(root==null) return list;
+        Stack<TreeNode> st=new Stack<>();
+        TreeNode curr=root;
+
+        while(curr!=null || !st.isEmpty()){
+            while(curr!=null){
+                st.push(curr);
+                curr=curr.left;
+            }
+            
+            if(st.peek().right!=null){
+                curr=st.peek().right;
+            }else{
+
+                TreeNode temp=st.pop();
+                list.add(temp.val);
+                while(!st.isEmpty() && temp==st.peek().right){
+                    temp=st.pop();
+                    list.add(temp.val);
+                }
+            }
+
+           
+
+
+        }
+        return list;
+
+        
+    }
+
     
 }
